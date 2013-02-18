@@ -16,6 +16,9 @@ class Barcode():
             self.imagem = Image.open(arquivo)
         else:
             self.imagem = imagem
+        # O dicionário i25 traduz as sequencias de barras finas (narow) e grossas (Wide)
+        # em números.
+        # http://en.wikipedia.org/wiki/Interleaved_2_of_5
         self.i25 = {'nnWWn': '0',
                     'WnnnW': '1',
                     'nWnnW': '2',
